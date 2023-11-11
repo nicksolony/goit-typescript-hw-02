@@ -12,12 +12,11 @@ enum WeekDay {
   Sunday
 }
 
-function isWeekend(day: WeekDay): string {
+function isWeekend(day: WeekDay): boolean {
   switch (day) {
-    case WeekDay.Saturday:
-    case WeekDay.Sunday:
-      return 'Weekend';
+    case WeekDay.Saturday || WeekDay.Sunday:
+      return true;
     default:
-      return 'Workday';
+      return false;
   };
 };
